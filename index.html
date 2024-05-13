@@ -15,7 +15,7 @@
 
         <div class="nav-elements">
           <ul class="nav-items">
-            <li>Home</li>
+            <li class="active-name">Home</li>
             <li>About</li>
             <li>How it Works</li>
             <li>Services</li>
@@ -118,6 +118,26 @@
             class="carousel-img"
             src="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Image 1"
+          />
+          <img
+            class="carousel-img"
+            src="https://images.pexels.com/photos/1556691/pexels-photo-1556691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image 2"
+          />
+          <img
+            class="carousel-img"
+            src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image 3"
+          />
+          <img
+            class="carousel-img"
+            src="https://images.pexels.com/photos/1556691/pexels-photo-1556691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image 2"
+          />
+          <img
+            class="carousel-img"
+            src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image 3"
           />
           <img
             class="carousel-img"
@@ -323,49 +343,5 @@
     </div>
   </body>
 
-  <script>
-    const slider = document.querySelector(".gallery");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener("mousedown", (e) => {
-      isDown = true;
-      slider.classList.add("active");
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener("mouseleave", (_) => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mouseup", (_) => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const SCROLL_SPEED = 3;
-      const walk = (x - startX) * SCROLL_SPEED;
-      slider.scrollLeft = scrollLeft - walk;
-    });
-
-    function moveNext() {
-      const images = slider.querySelectorAll("img");
-      const currentImage = Array.from(images).findIndex(
-        (img) => img.offsetLeft >= slider.scrollLeft
-      );
-      if (currentImage === images.length - 1) {
-        // If it's the last image, scroll back to the first
-        slider.scrollLeft = 0;
-      } else {
-        // Otherwise, scroll to the next image
-        slider.scrollLeft = images[currentImage + 1].offsetLeft;
-      }
-    }
-
-    setInterval(moveNext, 3000); // Auto slide every 3 seconds
-  </script>
+<script src="/index.js"></script>
 </html>
