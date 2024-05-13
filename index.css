@@ -1,6 +1,11 @@
 body {
   background: #f5f8ff;
   overflow: auto;
+  background: rgb(63,94,251);
+background: -moz-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
   overflow-x: hidden;
 }
 
@@ -721,29 +726,66 @@ button[type="submit"]:hover {
   justify-content: center;
   margin-bottom: 50px;
 }
-.inner-footer{
+.inner-footer {
   width: 70vw;
-  height: 300px;
+  height: 280px;
   top: 4854px;
   left: 112px;
   gap: 0px;
   border-radius: 20px;
-  border: 3px solid red;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   opacity: 0px;
   margin-top: 40px;
   display: flex;
   align-items: center;
-  gap: 10%;
+  justify-content: center;
+  padding: 20px;
+  gap: 15%;
 }
 
-.left-footer{
-  width: 40%;
+.left-footer {
+  width: 35%;
   height: 100%;
-  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.right-footer{
+.right-footer {
   width: 50%;
-  border: 2px solid green;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ready-t {
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.foot-items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.icons {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+
+.icons p {
+  margin-right: 30px;
+}
+.right-align {
+  margin-left: auto;
+}
+.foot-items li {
+  margin-right: 30px;
+  margin-top: 20px;
+  color: #8987a1;
 }
