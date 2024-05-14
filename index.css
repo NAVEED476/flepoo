@@ -6,8 +6,16 @@ body {
   overflow-x: hidden;
 }
 
-button{
+button {
   cursor: pointer;
+}
+
+.fleapo-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  flex-direction: column;
 }
 
 .navbar {
@@ -19,14 +27,18 @@ button{
 }
 
 .logo-cont {
-  margin-left: 10px;
+  margin-left: 40px;
+}
+.img-style{
+  width: 140px;
 }
 .nav-elements {
-  width: 600px;
+  width: 500px;
   height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-left:80px ;
 }
 
 .nav-items {
@@ -34,18 +46,18 @@ button{
   align-items: center;
   justify-content: space-evenly;
   gap: 30px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  padding: 10px 20px;
-  margin-left: 20px;
-  background-color:white;
+  /* padding: 10px 30px; */
+  margin-left: 30px;
+  background-color: white;
   border-radius: 16px;
 }
-.nav-items li{
+.nav-items li {
   color: #b9b6d7;
   font-weight: 400;
 }
-.active-name{
+.active-name {
   color: black;
   font-weight: 700;
 }
@@ -59,7 +71,8 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
+  margin-bottom: 8px;
 }
 
 .signup {
@@ -76,11 +89,12 @@ li {
 
 .sign-in {
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   width: 50px;
   height: 24px;
   opacity: 80%;
   color: #b9b6d7;
+  margin-top: 14px;
 }
 
 .awesome-text {
@@ -91,16 +105,22 @@ li {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 50px;
+  background: linear-gradient(270deg, #FF12DC 0%, #FFB912 100%);
+
+  /* background: #ffffff; */
 }
 
 .awesome-header {
-  width: 580px;
+  width: 550px;
   height: 168px;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 54px;
   text-align: center;
   color: #252432;
   margin-bottom: 50px;
+  margin-left: -30px;
+  line-height: 1.3;
+  
 }
 
 .get-in-btn {
@@ -138,8 +158,8 @@ li {
   grid-template-areas:
     "box1 box2 box3 box4"
     "box5 . box6 .";
-  grid-template-columns: 280px 280px 280px 280px;
-  grid-template-rows: 250px 250px;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-rows: 210px 210px;
   gap: 10px;
 }
 
@@ -158,32 +178,33 @@ li {
 .box4 {
   grid-area: box4;
   background-color: white;
-  height: 510px;
+  height: 320px;
   border-radius: 16px;
 }
 .box5 {
   grid-area: box5;
   background-color: white;
-  width: 570px;
+  width: 450px;
 }
 .box6 {
   grid-area: box6;
   background-color: white;
-  width: 280px;
+  width: 210px;
 }
 .box7 {
   grid-area: box7;
   background-color: white;
 }
 .common-box {
-  /* padding: 10px; */
+  padding: 10px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: first baseline;
+  justify-content: left;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: left;
+  margin-top: 20px;
 }
 
 .web-svg-icon {
@@ -205,7 +226,7 @@ li {
 }
 .webflow-png {
   background: #5752d3;
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -219,16 +240,25 @@ li {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  width: 240px;
+  height: 250px;
+  object-fit: cover;
 }
 .box-info {
   color: #8987a1;
-  font-size: 14px;
-  margin: 10px;
+  font-size: 12px;
+  margin:0px 8px;
 }
 
 .webflow-title {
   margin-left: 10px;
   text-align: left;
+  font-size: 16px;
+}
+
+.lets-get-in{
+  text-align: center;
+  font-size: 50px;
 }
 
 .what-we-do {
@@ -238,8 +268,9 @@ li {
   font-size: 60px;
   font-weight: 700;
   text-align: left;
-  margin-left: -830px;
-  margin-bottom: 60px;
+  margin-left: -660px;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 .web-d {
   width: 115px;
@@ -279,27 +310,6 @@ li {
   background: whit;
 }
 
-h1 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-li {
-  margin-bottom: 5px;
-}
 
 .un-req:before {
   content: "\2713";
@@ -314,28 +324,28 @@ li {
 }
 
 .check-work {
-  width: 100vw;
-  height: 200px;
+  width: 100%;
+  margin-top: 110px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  margin-left: -10px;
 }
 
 .check-work-title {
   font-family: Raleway;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
 }
 
 .check-work-info {
-  width: 449px;
-  height: 42px;
+  width: 400px;
+  margin: 0;
   font-family: Inter;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   text-align: center;
+  margin-top: -10px;
 }
 
 .carousel-img {
@@ -345,9 +355,12 @@ li {
 }
 
 .carousel-container {
-  width: 100vw;
+  width: 100%;
+  height: 450px;
   overflow: hidden;
   position: relative;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .carousel {
@@ -462,7 +475,6 @@ li {
 ::-webkit-scrollbar-track {
   background-color: #f0f0f0;
 }
-
 
 .rating-info {
   display: flex;
@@ -695,8 +707,7 @@ body {
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
+  width: 580px;
 }
 
 .form-group {
@@ -776,7 +787,7 @@ button[type="submit"]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#576be9",endColorstr="#a36a6a",GradientType=1);
 }
 .inner-footer {
-  width: 70vw;
+  width: 100%;
   height: 280px;
   top: 4854px;
   left: 112px;
@@ -841,7 +852,6 @@ button[type="submit"]:hover {
   color: #8987a1;
 }
 
-
 /* Media Query for screens smaller than 768px (Tablets and Mobile Devices) */
 @media (max-width: 767px) {
   .nav-elements {
@@ -898,7 +908,8 @@ button[type="submit"]:hover {
   }
 
   .box4 {
-    height: auto;
+    height: 380px;
+    margin-top: 20px;
   }
 
   .box5 {
@@ -913,7 +924,6 @@ button[type="submit"]:hover {
     margin-left: 0;
     text-align: center;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -954,4 +964,3 @@ button[type="submit"]:hover {
 
   /* Additional styles for tablet screens */
 }
-
